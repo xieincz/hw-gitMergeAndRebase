@@ -1,4 +1,4 @@
 #include <stdio.h>
 int main() {
-    printf("C");
+    printf("C: a good feature");
 }
