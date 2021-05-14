@@ -19,17 +19,17 @@ homework: practice for git merge, rebase and squash-merge
 2. 执行 `git clone https://github.com/你的用户名/hw-gitMergeAndRebase` 将你 fork 的仓库 clone 到本地
 3. 在所有练习开始之前，请明确，现在这个 Repo 有以下的三对分支：
 ```
-	  A---B---C             my-feature-1
-	 /
+      A---B---C                 my-feature-1
+     /
  ---D---E---F                   master-1
     
-	  A---B---C             my-feature-2
-	 /
+      A---B---C                 my-feature-2
+     /
  ---D---E---F                   master-2
 
-	  A---B---C             my-feature-3
-	 /
- ---D---E---F                   master-3 
+      A---B---C                 my-feature-3
+     /
+ ---D---E---F                   master-3
 ```
 
 ## hw1: merge
@@ -37,9 +37,9 @@ homework: practice for git merge, rebase and squash-merge
 1. 请在 `master-1`分支上合并`my-feature-1`分支（解决该解决的冲突，保留该保留的代码），并产生一个合并提交 `G`，期望结果如图所示：
 
     ```
-            A---B---C         my-feature-1
-           /         \
-     ---D---E---F-----G       master-1
+          A---B---C         my-feature-1
+         /         \
+     ---D---E---F---G       master-1
     ```
 2. push 这个 `master-1` 分支到你的 Repo
 
@@ -63,8 +63,8 @@ OK，现在你完成了 hw2，你现在需要对母仓库提交一个 issue 来�
 1. 请将 `my-feature-3` 分支上的 3 个提交（A、B、C）使用 `merge --squash` 方式（解决该解决的冲突，保留该保留的代码），使得这三个提交被合并成一个提交进入 `master-3` 分支，期望结果如图所示：
 
     ```
-              A---B---C   my-feature-3
-            /
+          A---B---C       my-feature-3
+         /
      ---D---E---F---G     master-3 
                     |
                    压扁后的提交
