@@ -24,7 +24,7 @@ def get_raw(url):
 
 def hw1():
     soup = BeautifulSoup(requests.get('https://github.com/{}/hw-gitMergeAndRebase/commits/master-1'.format(username)).text, features='lxml')
-    sha = [cc.get('value') for cc in soup.find_all("clipboard-copy")]
+    sha = [cc.get('value') for cc in soup.find_all("clipboard-copy") if cc.get('value')]
     test(len(sha) == 9, "commit_number=9")
     test(sha[1:] == [
         "07ad66a71ff56e2205ab495f1f871838ee5d09d2",
@@ -37,11 +37,11 @@ def hw1():
         "9b8530d8da65928ddabed2bb429f7c043b142267"
     ], "commit sha-1 check")
     A = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/master-1/A.c'.format(username))
-    test('printf("A:agoodfeature");//A' in A, 'file A check')
+    test('printf("A:agoodfeature");//A' in A, 'file A check (want: \'printf("A: a good feature"); // A\')')
     B = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/master-1/B.c'.format(username))
-    test('printf("B:agoodfeature");//B' in B, 'file B check')
+    test('printf("B:agoodfeature");//B' in B, 'file B check (want: \'printf("B: a good feature"); // B\')')
     C = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/master-1/C.c'.format(username))
-    test('printf("C:agoodfeature");//C' in C, 'file C check')
+    test('printf("C:agoodfeature");//C' in C, 'file B check (want: \'printf("C: a good feature"); // C\')')
 
 
 def hw2():
