@@ -37,11 +37,11 @@ def hw1():
         "9b8530d8da65928ddabed2bb429f7c043b142267"
     ], "commit sha-1 check")
     A = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/master-1/A.c'.format(username))
-    test('printf("A:agoodfeature");//A' in A, 'file A check (want: \'printf("A: a good feature"); // A\')')
+    test('printf("A:agoodfeature");//A' in A, 'checking file A (want: \'printf("A: a good feature"); // A\')')
     B = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/master-1/B.c'.format(username))
-    test('printf("B:agoodfeature");//B' in B, 'file B check (want: \'printf("B: a good feature"); // B\')')
+    test('printf("B:agoodfeature");//B' in B, 'checking file B (want: \'printf("B: a good feature"); // B\')')
     C = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/master-1/C.c'.format(username))
-    test('printf("C:agoodfeature");//C' in C, 'file B check (want: \'printf("C: a good feature"); // C\')')
+    test('printf("C:agoodfeature");//C' in C, 'checking file C (want: \'printf("C: a good feature"); // C\')')
 
 
 def hw2():
@@ -56,11 +56,11 @@ def hw2():
         "9b8530d8da65928ddabed2bb429f7c043b142267"
     ], "commit sha-1 check")
     A = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/my-feature-2/A.c'.format(username))
-    test('printf("A:agoodfeature");//A' in A, 'file A check')
+    test('printf("A:agoodfeature");//A' in A, 'checking file A (want: \'printf("A: a good feature"); // A\')')
     B = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/my-feature-2/B.c'.format(username))
-    test('printf("B:agoodfeature");//B' in B, 'file B check')
+    test('printf("B:agoodfeature");//B' in B, 'checking file B (want: \'printf("B: a good feature"); // B\')')
     C = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/my-feature-2/C.c'.format(username))
-    test('printf("C:agoodfeature");//C' in C, 'file C check')
+    test('printf("C:agoodfeature");//C' in C, 'checking file C (want: \'printf("C: a good feature"); // C\')')
 
 
 def hw3():
@@ -75,11 +75,11 @@ def hw3():
         "9b8530d8da65928ddabed2bb429f7c043b142267"
     ], "commit sha-1 check")
     A = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/master-3/A.c'.format(username))
-    test('printf("A:agoodfeature");//A' in A, 'file A check')
+    test('printf("A:agoodfeature");//A' in A, 'checking file A (want: \'printf("A: a good feature"); // A\')')
     B = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/master-3/B.c'.format(username))
-    test('printf("B:agoodfeature");//B' in B, 'file B check')
+    test('printf("B:agoodfeature");//B' in B, 'checking file B (want: \'printf("B: a good feature"); // B\')')
     C = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/master-3/C.c'.format(username))
-    test('printf("C:agoodfeature");//C' in C, 'file C check')
+    test('printf("C:agoodfeature");//C' in C, 'checking file C (want: \'printf("C: a good feature"); // C\')')
 
 
 def hw4():
@@ -92,11 +92,11 @@ def hw4():
         "9b8530d8da65928ddabed2bb429f7c043b142267"
     ], "commit sha-1 check")
     A = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/my-feature/A.c'.format(username))
-    test('printf("A:agoodfeature");//A' in A, 'file A check')
+    test('printf("A:agoodfeature");//A' in A, 'checking file A (want: \'printf("A: a good feature"); // A\')')
     B = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/my-feature/B.c'.format(username))
-    test('printf("B:agoodfeature");//B' in B, 'file B check')
+    test('printf("B:agoodfeature");//B' in B, 'checking file B (want: \'printf("B: a good feature"); // B\')')
     C = get_raw('https://raw.githubusercontent.com/{}/hw-gitMergeAndRebase/my-feature/C.c'.format(username))
-    test('printf("C:agoodfeature");//C' in C, 'file C check')
+    test('printf("C:agoodfeature");//C' in C, 'checking file C (want: \'printf("C: a good feature"); // C\')')
 
 
 methods = [hw1, hw2, hw3, hw4]
