@@ -46,7 +46,7 @@ def hw1():
 
 def hw2():
     soup = BeautifulSoup(requests.get('https://github.com/{}/hw-gitMergeAndRebase/commits/my-feature-2'.format(username)).text, features='lxml')
-    sha = [cc.get('value') for cc in soup.find_all("clipboard-copy")]
+    sha = [cc.get('value') for cc in soup.find_all("clipboard-copy") if cc.get('value')]
     test(len(sha) == 8, "commit_number=8")
     test(sha[3:] == [
         "1d21f4ccff3693b7646a913b69066ccbae611a17",
@@ -65,7 +65,7 @@ def hw2():
 
 def hw3():
     soup = BeautifulSoup(requests.get('https://github.com/{}/hw-gitMergeAndRebase/commits/master-3'.format(username)).text, features='lxml')
-    sha = [cc.get('value') for cc in soup.find_all("clipboard-copy")]
+    sha = [cc.get('value') for cc in soup.find_all("clipboard-copy") if cc.get('value')]
     test(len(sha) == 6, "commit_number=6")
     test(sha[1:] == [
         "1d21f4ccff3693b7646a913b69066ccbae611a17",
@@ -84,7 +84,7 @@ def hw3():
 
 def hw4():
     soup = BeautifulSoup(requests.get('https://github.com/{}/hw-gitMergeAndRebase/commits/my-feature'.format(username)).text, features='lxml')
-    sha = [cc.get('value') for cc in soup.find_all("clipboard-copy")]
+    sha = [cc.get('value') for cc in soup.find_all("clipboard-copy") if cc.get('value')]
     test(len(sha) == 4, "commit_number=4")
     test(sha[1:] == [
         "4ed609c7e3969315580c47d78b3edb9b62d3386c",
