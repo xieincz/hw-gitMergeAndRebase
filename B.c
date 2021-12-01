@@ -1,5 +1,5 @@
 #include <stdio.h>
 int main() {
-  printf("B: a good feature");
+  printf("B: a good feature"); // B
 
 }
